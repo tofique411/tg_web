@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads Hub</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 850px;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        .content-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .ad-sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .file-list h3 {
+            margin-bottom: 12px;
+            font-size: 15px;
+            color: #38bdf8;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 8px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        ul {
+            list-style: none;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+
+        li {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #38bdf8;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        li:hover {
+            background: rgba(15, 23, 42, 0.9);
+            transform: translateY(-2px);
+        }
+
+        .file-info {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            flex-grow: 1;
+            padding-right: 10px;
+        }
+
+        .file-name {
+            font-weight: 500;
+            color: #f1f5f9;
+            font-size: 14px;
+            word-break: break-all;
+        }
+
+        .file-size {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transition: opacity 0.2s, transform 0.1s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.03);
+        }
+
+        .ad-box {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px dashed rgba(56, 189, 248, 0.3);
+            padding: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+            border-radius: 10px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .content-layout {
+                flex-direction: column;
+            }
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🚀 Downloads Hub</h2>
+        <p class="subtitle">Secure & Fast Direct File Downloads</p>
+
+        <div class="content-layout">
+            <!-- Left Side: Main File List -->
+            <div class="main-content">
+                <div class="file-list">
+                    <h3>Available Files</h3>
+                    <ul>
+                        <!-- File 1 -->
+                        <li>
+                            <div class="file-info">
+                                <span class="file-name">pydroid 3.apk</span>
+                                <span class="file-size">15.4 MB</span>
+                            </div>
+                            <a href="base.apk" download class="download-btn">Download</a>
+                        </li>
+
+                        <!-- File 2 -->
+                        <li>
+                            <div class="file-info">
+                                <span class="file-name">buntyhehe.py</span>
+                                <span class="file-size">2.1 MB</span>
+                            </div>
+                            <a href="buntyhehe.py" download class="download-btn">Download</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Ad Sidebar -->
+            <div class="ad-sidebar">
+                <div class="ad-box">
+                    <span>[ Ad Banner Space ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
